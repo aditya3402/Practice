@@ -77,7 +77,7 @@ public class List<T>
 			Node<T> prev = ReverseList(head.next);
 			prev.next = head;
 		}
-    else 
+                else 
 		{
 			start.next = null;
 			end = start;
@@ -99,7 +99,7 @@ public class List<T>
 			prev2 = null;
 			second = start;
 		}
-    //find nodes
+                //find nodes
 		Node<T> head = start;
 		while(head.next != null) 
 		{
@@ -113,6 +113,11 @@ public class List<T>
 			}
 			head = head.next;
 		}
+		//if a or b not found
+		if(first == null || second == null) {
+		  System.out.println("Nodes not found");
+		  return null;
+	    }
 		//swap
 		if(prev1 != null && prev2 != null) 
 		{
