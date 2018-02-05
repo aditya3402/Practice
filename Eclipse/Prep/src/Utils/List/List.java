@@ -123,7 +123,8 @@ public class List<T>
 		{
 	      start = first;
 		}
-		if(prev2 == null) {
+		if(prev2 == null) 
+		{
 		  start = second;
 		}
 		Node<T> temp = first.next;
