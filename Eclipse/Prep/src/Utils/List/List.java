@@ -11,7 +11,7 @@ public class List<T>
 		this.end = null;
 	}
 	
-	public void Add(T data)
+	public void AddRear(T data)
 	{
 		Node<T> node = new Node<T>(data);
 		if(start == null)
@@ -23,6 +23,21 @@ public class List<T>
 		{
 			end.next = node;
 			end = node;
+		}
+	}
+	
+	public void AddFront(T data)
+	{
+		Node<T> node = new Node<T>(data);
+		if(start == null)
+		{
+			start = node;
+			end = node;
+		}
+		else
+		{
+			node.next = start;
+			start = node;
 		}
 	}
 	
@@ -41,6 +56,30 @@ public class List<T>
 	public void ReverseList()
 	{
 		end = ReverseList(start);
+	}
+	
+	public void RemoveFront()
+	{
+		if(start == end)
+		{
+			start = null;
+			end = null;
+		}
+		else
+		{
+			start = start.next;			
+		}
+			
+	}
+
+	public T GetFront()
+	{
+		return start.data;
+	}
+	
+	public boolean IsEmpty()
+	{
+		return start == null ? true:false;
 	}
 	
 	private void PrintForward(Node<T> head)
@@ -86,7 +125,8 @@ public class List<T>
 		return head;
 	}
 	
-	public Node<T> swapNodes(T a, T b) {
+	public Node<T> swapNodes(T a, T b) 
+	{
 		Node<T> prev1 = null, prev2 = null, first = null, second = null;
 		//see if start is any of a and b
 		if(start.data == a){
