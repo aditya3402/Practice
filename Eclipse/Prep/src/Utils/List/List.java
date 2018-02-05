@@ -75,13 +75,53 @@ public class List<T>
 		else if (head != end)
 		{
 			Node<T> prev = ReverseList(head.next);
-			head.next = prev.next;
 			prev.next = head;
 		}
-		else
+    else 
 		{
+			start.next = null;
+			end = start;
 			start = head;
 		}
 		return head;
+	}
+	
+	public Node<T> swapNodes(T a, T b) {
+		Node<T> prev1 = null, prev2 = null, first = null, second = null;
+		//see if start is any of a and b
+		if(start.data == a) {
+			prev1 = null;
+			first = start;
+		} else if(start.data == b) {
+			prev2 = null;
+			second = start;
+		}
+    //find nodes
+		Node<T> head = start;
+		while(head.next != null) {
+			if(head.next.data == a) {
+				prev1 = head;
+				first = head.next;
+			} else if(head.next.data == b) {
+				prev2 = head;
+				second = head.next;
+			}
+			head = head.next;
+		}
+		//swap
+		if(prev1 != null && prev2 != null) {
+		  prev1.next = second;
+		  prev2.next = first;
+	  }
+		if(prev1 == null) {
+	      start = first;
+		}
+		if(prev2 == null) {
+		  start = second;
+		}
+		Node<T> temp = first.next;
+		first.next = second.next;
+		second.next = temp;
+		return start;
 	}
 }
