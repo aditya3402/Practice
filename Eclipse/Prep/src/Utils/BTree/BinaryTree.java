@@ -1,48 +1,38 @@
 package Utils.BTree;
 
-public class BinaryTree<T> 
+public class BinaryTree 
 {
-	private Node<T> root;
+	private Node root;
 	
 	public BinaryTree()
 	{
 		root = null;
 	}
 	
-	public Node<T> MakeTree(Node<T> root, T data)
+	public void MakeTree(double data)
 	{
-		if(root == null)
-		{
-			root = new Node<T>(data);
-		}
-		else if(data <= root.data)
-		{
-			root = MakeTree(root.left, data);
-		}
-		else
-		{
-			root = MakeTree(root.right,data);
-		}
-		
-		return root;
+		root = MakeTree(root,data);
 	}
 	
 	public void Inorder()
 	{
 		Inorder(root);
+		System.out.println();
 	}
 	
 	public void Preorder()
 	{
 		Preorder(root);
+		System.out.println();
 	}
 	
 	public void Postorder()
 	{
 		Postorder(root);
+		System.out.println();
 	}
 	
-	private void Inorder(Node<T> root)
+	private void Inorder(Node root)
 	{
 		if(root != null)
 		{
@@ -52,7 +42,7 @@ public class BinaryTree<T>
 		}
 	}
 	
-	private void Preorder(Node<T> root)
+	private void Preorder(Node root)
 	{
 		if(root != null)
 		{
@@ -62,7 +52,7 @@ public class BinaryTree<T>
 		}
 	}
 	
-	private void Postorder(Node<T> root)
+	private void Postorder(Node root)
 	{
 		if(root != null)
 		{
@@ -70,5 +60,23 @@ public class BinaryTree<T>
 			Postorder(root.right);
 			System.out.print("\t" + root.data);
 		}
+	}
+	
+	private Node MakeTree(Node root, double data)
+	{
+		if(root == null)
+		{
+			root = new Node(data);
+		}
+		else if(data <= root.data)
+		{
+			root.left = MakeTree(root.left, data);
+		}
+		else
+		{
+			root.right = MakeTree(root.right,data);
+		}
+		
+		return root;
 	}
 }

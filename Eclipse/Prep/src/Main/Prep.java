@@ -1,10 +1,13 @@
 package Main;
 
 import Utils.List.*;
+import Utils.BTree.*;
 
 public class Prep {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
+		/*
 		List<Integer> list = new List<Integer>();
 		list.Add(10);
 		list.Add(20);
@@ -33,5 +36,15 @@ public class Prep {
 		list.PrintForward();
 		list.swapNodes(50, 20);// involves first node
 		list.PrintForward();
+		*/
+		BinaryTree bst = new BinaryTree();
+		double[] arr = {53,46,27,54,31,45,39,24,12,45,95,40};
+		for(int i = 0;i < 12 ; i++)
+		{
+			bst.MakeTree(arr[i]);
+		}
+		bst.Inorder();
+		bst.Preorder();
+		bst.Postorder();
 	}
 }

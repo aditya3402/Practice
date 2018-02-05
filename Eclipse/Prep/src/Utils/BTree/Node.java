@@ -1,12 +1,12 @@
 package Utils.BTree;
 
-public class Node<T> 
+public class Node 
 {
-	public T data;
-	public Node<T> left;
-	public Node<T> right;
+	public double data;
+	public Node left;
+	public Node right;
 	
-	public Node(T data)
+	public Node(double data)
 	{
 		this.data = data;
 		this.left = null;
