@@ -2,49 +2,25 @@ package Main;
 
 import Utils.List.*;
 import Utils.BTree.*;
+import Utils.Stack.*;
 
-public class Prep {
+public class Prep 
+{
 
 	public static void main(String[] args) 
 	{
-		/*
-		List<Integer> list = new List<Integer>();
-		list.Add(10);
-		list.Add(20);
-		list.Add(30);
-		list.Add(40);
-		list.Add(50);
-
-		System.out.println("//Print List");
-		list.PrintForward();
-
-		System.out.println("//Print reverse without reversing the list");
-		list.PrintReverse();
-
-		System.out.println("//Reverse List");
-		list.ReverseList();
-		list.PrintForward();
-
-		System.out.println("//Swap nodes in a linked list without swapping data- errorcase");
-		list.swapNodes(20, 70);
-		list.PrintForward();
-
-		System.out.println("//Swap nodes in a linked list without swapping data- validcase");
-		list.swapNodes(40, 10);// involves last node
-		list.PrintForward();
-		list.swapNodes(40, 10);// swap back
-		list.PrintForward();
-		list.swapNodes(50, 20);// involves first node
-		list.PrintForward();
-		*/
-		BinaryTree bst = new BinaryTree();
-		double[] arr = {53,46,27,54,31,45,39,24,12,45,95,40};
-		for(int i = 0;i < 12 ; i++)
-		{
-			bst.MakeTree(arr[i]);
-		}
-		bst.Inorder();
-		bst.Preorder();
-		bst.Postorder();
+		Stack<Integer> stk = new Stack<Integer>();
+		stk.Push(10);
+		stk.Push(20);
+		stk.Push(30);
+		stk.Push(40);
+		stk.Push(50);
+		stk.Push(60);
+		
+		System.out.println(stk.Top());
+		stk.pop();
+		System.out.println(stk.Top());
+		stk.pop();
+		System.out.println(stk.Top());
 	}
 }

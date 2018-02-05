@@ -20,17 +20,17 @@ public class Stack<T>
 		list.RemoveFront();
 	}
 	
-	public T Top(T top)
+	public T Top()
 	{
 		if(!list.IsEmpty())
 		{
-			top =  list.GetFront();
+			return list.GetFront();
 		}
 		else
 		{
 			System.out.println("Stack is Empty");			
 		}
 		
-		return top;
+		return null;
 	}
 }
