@@ -86,20 +86,25 @@ public class List<T>
 		return head;
 	}
 	
-	public Node<T> swapNodes(T a, T b) {
+	public Node<T> swapNodes(T a, T b) 
+	{
 		Node<T> prev1 = null, prev2 = null, first = null, second = null;
 		//see if start is any of a and b
-		if(start.data == a) {
+		if(start.data == a) 
+		{
 			prev1 = null;
 			first = start;
-		} else if(start.data == b) {
+		} else if(start.data == b) 
+		{
 			prev2 = null;
 			second = start;
 		}
     //find nodes
 		Node<T> head = start;
-		while(head.next != null) {
-			if(head.next.data == a) {
+		while(head.next != null) 
+		{
+			if(head.next.data == a) 
+			{
 				prev1 = head;
 				first = head.next;
 			} else if(head.next.data == b) {
@@ -109,11 +114,13 @@ public class List<T>
 			head = head.next;
 		}
 		//swap
-		if(prev1 != null && prev2 != null) {
+		if(prev1 != null && prev2 != null) 
+		{
 		  prev1.next = second;
 		  prev2.next = first;
-	  }
-		if(prev1 == null) {
+		}
+		if(prev1 == null) 
+		{
 	      start = first;
 		}
 		if(prev2 == null) {
