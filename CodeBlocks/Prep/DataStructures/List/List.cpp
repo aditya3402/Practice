@@ -1,6 +1,8 @@
 #include <cstdlib>
 #include <iostream>
-#include "List.h"
+#include "../../include/List.h"
+
+using namespace List;
 
 template<class T>
 Node<T>::Node(T data)
@@ -14,6 +16,12 @@ List<T>::List()
 {
 	start = NULL;
 	end = NULL;
+}
+
+template <class T>
+List<T>::~List()
+{
+    DeleteList();
 }
 
 template <class T>
@@ -71,4 +79,14 @@ void List<T>::Add(T data)
 		end->next = ptr;
 		end = ptr;
 	}
+}
+
+template<class T>
+void DeleteList(Node<T> *head)
+{
+    if(head !=NULL)
+    {
+        DeleteList(head->next);
+    }
+    delete head;
 }

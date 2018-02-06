@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="DataStructures/List/List.cpp" />
+		<Unit filename="DataStructures/Tree/BTree.cpp" />
+		<Unit filename="include/BTree.h" />
+		<Unit filename="include/List.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<envvars />
