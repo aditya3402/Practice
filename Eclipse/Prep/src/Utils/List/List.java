@@ -82,6 +82,29 @@ public class List<T>
 		return start == null ? true:false;
 	}
 	
+	public boolean IsPalindrome()
+	{
+		Node<T> saveStart = start;
+		boolean val = IsPalindrome(start);
+		start = saveStart;
+		return val;
+	}
+	private boolean IsPalindrome(Node<T> head)
+	{
+		boolean val = false;
+		if(head == null)
+		{
+			return true;
+		}
+		
+		if(IsPalindrome(head.next) && (start.data == head.data))
+		{
+			val = true;
+		}
+		start = start.next;
+		return val;
+	}
+	
 	private void PrintForward(Node<T> head)
 	{
 		if(head != null)

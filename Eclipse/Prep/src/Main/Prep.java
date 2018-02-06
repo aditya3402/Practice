@@ -9,18 +9,18 @@ public class Prep
 
 	public static void main(String[] args) 
 	{
-		Stack<Integer> stk = new Stack<Integer>();
-		stk.Push(10);
-		stk.Push(20);
-		stk.Push(30);
-		stk.Push(40);
-		stk.Push(50);
-		stk.Push(60);
+		List<Integer> list = new List<Integer>();
+		list.AddRear(10);
+		list.AddRear(20);
+		list.AddRear(30);
+		list.AddRear(500);
+		list.AddRear(30);
+		list.AddRear(20);
+		list.AddRear(10);
 		
-		System.out.println(stk.Top());
-		stk.pop();
-		System.out.println(stk.Top());
-		stk.pop();
-		System.out.println(stk.Top());
+		if(list.IsPalindrome())
+			System.out.println("yes");
+		else
+			System.out.println("no");
 	}
 }
