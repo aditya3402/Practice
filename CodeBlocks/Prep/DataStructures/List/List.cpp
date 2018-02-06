@@ -1,17 +1,19 @@
-#include "../Header/List.h"
+#include <cstdlib>
+#include <iostream>
+#include "List.h"
 
 template<class T>
 Node<T>::Node(T data)
 {
 	this->data = data;
-	this->next = null;
+	this->next = NULL;
 }
 
 template <class T>
 List<T>::List()
 {
-	start = null;
-	end = null;
+	start = NULL;
+	end = NULL;
 }
 
 template <class T>
@@ -29,7 +31,7 @@ void List<T>::PrintReverse()
 template <class T>
 void List<T>::PrintForward(Node<T> *head)
 {
-	if(head == null || head->next == null)
+	if(head == NULL || head->next == NULL)
 	{
 		return;
 	}
@@ -43,7 +45,7 @@ void List<T>::PrintForward(Node<T> *head)
 template <class T>
 void List<T>::PrintReverse(Node<T> *head)
 {
-	if(head != null)
+	if(head != NULL)
 	{
 		Print(head->next);
 	}
@@ -51,7 +53,7 @@ void List<T>::PrintReverse(Node<T> *head)
 	{
 		return;
 	}
-	
+
 	std::cout<<head->data;
 }
 
@@ -59,14 +61,14 @@ template<class T>
 void List<T>::Add(T data)
 {
 	Node<T> * ptr = new Node<T>(data);
-	if(end == null)
+	if(end == NULL)
 	{
-		head = ptr;
+		start = ptr;
 		end = ptr;
 	}
 	else
 	{
 		end->next = ptr;
 		end = ptr;
-	}	
+	}
 }

@@ -1,4 +1,4 @@
-
+#include <iostream>
 template <class T>
 class Node
 {
@@ -22,5 +22,5 @@ private:
 	void PrintReverse(Node<T> *head);
 
 	Node<T> * start;
-	Node<T> * end;	
+	Node<T> * end;
 };

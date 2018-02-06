@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1517931555 source:/Users/ajena/Documents/GitHub/Practice/CodeBlocks/Prep/main.cpp
+	<iostream>
+
+1517933102 source:/Users/ajena/Documents/GitHub/Practice/CodeBlocks/Prep/DataStructures/List/List.cpp
+	<cstdlib>
+	<iostream>
+	"List.h"
+
+1517932633 /Users/ajena/Documents/GitHub/Practice/CodeBlocks/Prep/DataStructures/List/List.h
+	<iostream>
+
