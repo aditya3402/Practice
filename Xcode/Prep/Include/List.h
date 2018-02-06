@@ -7,9 +7,14 @@ namespace List
     class Node
     {
     public:
-        Node(T data);
         T data;
         Node<T> * next;
+        
+        Node(T data)
+        {
+            this->data = data;
+            this->next = NULL;
+        }
     };
 
     template <class T>

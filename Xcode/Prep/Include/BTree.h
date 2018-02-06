@@ -34,6 +34,7 @@ namespace Tree
         void Inorder(Node * root);
         void Preorder(Node * root);
         void Postorder(Node * root);
+        void DeleteTree(Node *root);
 
         //data member
         Node *root;

@@ -11,7 +11,7 @@ BTree::BTree()
 
 BTree::~BTree()
 {
-    //dtor
+    DeleteTree(root);
 }
 
 void BTree::MakeTree(double data)
@@ -83,4 +83,14 @@ Node * BTree::MakeTree(Node *root ,double data)
         root->right = MakeTree(root->right,data);
     }
     return root;
+}
+
+void BTree::DeleteTree(Node* root)
+{
+    if(root)
+    {
+        DeleteTree(root->left);
+        DeleteTree(root->right);
+        delete root;
+    }
 }

@@ -4,13 +4,6 @@
 
 using namespace List;
 
-template<class T>
-Node<T>::Node(T data)
-{
-	this->data = data;
-	this->next = NULL;
-}
-
 template <class T>
 List<T>::List()
 {
