@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B72B6DA7202A60F300C80B0E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72B6DA6202A60F300C80B0E /* main.cpp */; };
+		B72B6DBB202A670F00C80B0E /* List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72B6DBA202A670F00C80B0E /* List.cpp */; };
+		B72B6DBD202A671C00C80B0E /* BTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72B6DBC202A671C00C80B0E /* BTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,8 +27,10 @@
 /* Begin PBXFileReference section */
 		B72B6DA3202A60F300C80B0E /* Prep */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Prep; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72B6DA6202A60F300C80B0E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		B72B6DAF202A61DE00C80B0E /* DataStructures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DataStructures; path = Prep/DataStructures; sourceTree = "<group>"; };
-		B72B6DB0202A61DE00C80B0E /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = Prep/include; sourceTree = "<group>"; };
+		B72B6DBA202A670F00C80B0E /* List.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = List.cpp; sourceTree = "<group>"; };
+		B72B6DBC202A671C00C80B0E /* BTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BTree.cpp; sourceTree = "<group>"; };
+		B72B6DBE202A672700C80B0E /* BTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTree.h; sourceTree = "<group>"; };
+		B72B6DBF202A672700C80B0E /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +47,8 @@
 		B72B6D9A202A60F300C80B0E = {
 			isa = PBXGroup;
 			children = (
-				B72B6DAF202A61DE00C80B0E /* DataStructures */,
-				B72B6DB0202A61DE00C80B0E /* include */,
+				B72B6DB9202A669F00C80B0E /* Include */,
+				B72B6DB3202A666A00C80B0E /* DataStructures */,
 				B72B6DA5202A60F300C80B0E /* Prep */,
 				B72B6DA4202A60F300C80B0E /* Products */,
 			);
@@ -64,6 +68,64 @@
 				B72B6DA6202A60F300C80B0E /* main.cpp */,
 			);
 			path = Prep;
+			sourceTree = "<group>";
+		};
+		B72B6DB3202A666A00C80B0E /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				B72B6DB8202A669400C80B0E /* Queue */,
+				B72B6DB7202A668A00C80B0E /* Graph */,
+				B72B6DB6202A668400C80B0E /* Stack */,
+				B72B6DB5202A667C00C80B0E /* Tree */,
+				B72B6DB4202A667600C80B0E /* List */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		B72B6DB4202A667600C80B0E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B72B6DBA202A670F00C80B0E /* List.cpp */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		B72B6DB5202A667C00C80B0E /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				B72B6DBC202A671C00C80B0E /* BTree.cpp */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		B72B6DB6202A668400C80B0E /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		B72B6DB7202A668A00C80B0E /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		B72B6DB8202A669400C80B0E /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		B72B6DB9202A669F00C80B0E /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				B72B6DBE202A672700C80B0E /* BTree.h */,
+				B72B6DBF202A672700C80B0E /* List.h */,
+			);
+			path = Include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B72B6DA7202A60F300C80B0E /* main.cpp in Sources */,
+				B72B6DBD202A671C00C80B0E /* BTree.cpp in Sources */,
+				B72B6DBB202A670F00C80B0E /* List.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

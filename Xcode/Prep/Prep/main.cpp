@@ -7,8 +7,8 @@
 //
 
 #include <iostream>
-#include "include/List.h"
-#include "include/BTree.h"
+#include "../Include/List.h"
+#include "../Include/BTree.h"
 
 using namespace List;
 using namespace Tree;

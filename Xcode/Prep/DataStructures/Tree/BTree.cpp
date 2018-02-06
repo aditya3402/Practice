@@ -1,6 +1,6 @@
 #include <cstdlib>
 #include <iostream>
-#include "../../include/BTree.h"
+#include "../../Include/BTree.h"
 
 using namespace Tree;
 
